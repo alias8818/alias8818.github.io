@@ -76,3 +76,34 @@ ul { margin: 0; padding-left: 1.2rem; }
   .button { width: 100%; }
   .card { border-radius: 12px; }
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --canvas: #181715;
+    --surface: #252320;
+    --card: #1f1e1b;
+    --card-strong: #2d2a25;
+    --ink: #faf9f5;
+    --body: #ddd6cb;
+    --muted: #a09d96;
+    --hairline: rgba(250, 249, 245, .14);
+    --hairline-strong: rgba(250, 249, 245, .22);
+    --primary: #d88468;
+    --primary-active: #f2b29a;
+    --dark: #100f0e;
+    --dark-2: #252320;
+    --on-dark: #faf9f5;
+  }
+  body {
+    background:
+      radial-gradient(circle at 12% 0%, rgba(216, 132, 104, .18), transparent 28rem),
+      linear-gradient(180deg, #1d1b18, var(--canvas) 58%, #141311);
+  }
+  .button, .links a { background: rgba(37, 35, 32, .78); color: var(--ink); }
+  .button:hover, .links a:hover { background: rgba(45, 42, 37, .95); }
+  .button.primary { color: #17110e; background: #f2b29a; }
+  .stats div, .card { background: rgba(37, 35, 32, .76); }
+  .hero-art { background: #100f0e; }
+  .diagram-feature img { background: var(--surface); }
+}
